@@ -11,6 +11,7 @@ const errorHandler = require("./middleware/errorMiddleware");
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
+  "https://inventory-application-dusky.vercel.app",
   process.env.FRONTEND_URL, // You'll set this when deploying
 ];
 

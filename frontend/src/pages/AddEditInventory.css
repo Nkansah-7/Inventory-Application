@@ -1,0 +1,187 @@
+.add-edit-page {
+    min-height: calc(100vh - 72px);
+    padding: var(--spacing-8) var(--spacing-6);
+    animation: fadeIn var(--transition-base);
+}
+
+.add-edit-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.add-edit-header {
+    margin-bottom: var(--spacing-8);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+    background: none;
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    color: var(--text-secondary);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-bottom: var(--spacing-6);
+}
+
+.back-button:hover {
+    border-color: var(--color-primary-500);
+    color: var(--color-primary-400);
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.add-edit-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-extrabold);
+    margin-bottom: var(--spacing-2);
+}
+
+.add-edit-subtitle {
+    color: var(--text-secondary);
+    font-size: var(--font-size-lg);
+    margin: 0;
+}
+
+/* Form */
+.add-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+}
+
+.section-title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin: 0;
+    padding-bottom: var(--spacing-3);
+    border-bottom: 1px solid var(--border-secondary);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-5);
+}
+
+.form-col-full {
+    grid-column: 1 / -1;
+}
+
+/* Textarea */
+.textarea-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.textarea-label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.optional-label {
+    color: var(--text-tertiary);
+    font-weight: var(--font-weight-regular);
+}
+
+.textarea-field {
+    width: 100%;
+    padding: var(--spacing-4);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-normal);
+    color: var(--text-primary);
+    background: var(--glass-bg);
+    border: 2px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    transition: all var(--transition-base);
+    outline: none;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.textarea-field::placeholder {
+    color: var(--text-tertiary);
+    opacity: 0.6;
+}
+
+.textarea-field:hover:not(:disabled) {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.textarea-field:focus {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: flex-end;
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--border-secondary);
+}
+
+.form-actions button {
+    min-width: 160px;
+}
+
+/* Loading Placeholder */
+.loading-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-16);
+    gap: var(--spacing-4);
+}
+
+.loading-placeholder p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .add-edit-page {
+        padding: var(--spacing-4);
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+
+    .add-edit-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .add-edit-subtitle {
+        font-size: var(--font-size-base);
+    }
+}
